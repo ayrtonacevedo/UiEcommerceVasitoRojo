@@ -1,0 +1,44 @@
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: white; /* Cambia este valor al color que prefieras para el icono */
+}
+.swiper-button-next:hover::after,
+.swiper-button-prev:hover::after {
+  color: rgb(
+    218,
+    3,
+    3
+  ); /* Cambia este valor al color que prefieras para el icono en hover */
+}
+
+/* Cambia el color de los botones de paginación al pasar el cursor sobre ellos */
+.swiper-pagination-bullet:hover {
+  background-color: red; /* Cambia este valor al color que prefieras para el hover */
+}

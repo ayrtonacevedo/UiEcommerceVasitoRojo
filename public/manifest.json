@@ -1,0 +1,25 @@
+{
+  "short_name": "Vasito Rojo",
+  "name": "¡Bienvenido a Vesito Rojo, tu destino para la diversión en Rosario! Explora nuestro completo catálogo de bebidas alcohólicas y refrescos, junto con emocionantes juegos para previas como el beer pong. En nuestra página, puedes navegar fácilmente por nuestras promociones exclusivas, descubrir emocionantes combos y realizar pedidos directamente desde la comodidad de tu hogar. ¡Regístrate hoy mismo para acceder a beneficios adicionales y crea tu cuenta para una experiencia personalizada! Disfruta de la vida nocturna rosarina con Vesito Rojo.",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

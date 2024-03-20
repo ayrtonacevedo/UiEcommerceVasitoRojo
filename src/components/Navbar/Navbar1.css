@@ -1,0 +1,123 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+.navbar1 {
+  display: block;
+  padding: 1rem 5vw;
+  position: fixed;
+  width: 100%;
+  height: auto;
+  background: linear-gradient(
+    to bottom,
+    rgb(160, 0, 0),
+    rgba(255, 0, 0, 0.356)
+  );
+  z-index: 999;
+}
+.firstLine {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.firstLine img {
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+}
+
+.searchBar {
+  display: flex;
+  flex: 1;
+}
+.searchBar input {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+}
+.searchBar input::placeholder {
+  font-size: 16px;
+}
+.searchBar button {
+  height: 50px;
+  width: 30px;
+  border: none;
+  border-radius: 5px;
+}
+.icons {
+  display: flex;
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+}
+
+.icons > * {
+  margin-right: 10px; /* Espacio entre los elementos */
+}
+
+.icons > :last-child {
+  margin-right: 0; /* Elimina el margen derecho del último elemento */
+}
+
+.categories {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.categories ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+
+.categories ul li {
+  margin-right: 10px;
+}
+.categories.active {
+  display: flex;
+}
+
+.hamburgerMenu {
+  display: none;
+}
+@media screen and (max-width: 1040px) {
+  .hamburgerMenu {
+    display: initial;
+  }
+  .categories {
+    display: none;
+  }
+  .categories.active {
+    position: fixed; /* Fijo para que aparezca por encima de otros elementos */
+    top: 100px; /* Ajusta según sea necesario */
+    right: 0; /* Aparece del lado derecho */
+    width: 80%; /* Ajusta el ancho según sea necesario */
+    /* height: 100vh;  */
+    background: linear-gradient(
+      to bottom,
+      rgb(160, 0, 0),
+      rgba(255, 0, 0, 0.356)
+    );
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    padding: 1rem;
+    z-index: 1000; /* Asegura que aparezca por encima del navbar */
+  }
+  .categories.active ul {
+    display: block;
+    margin-top: 1px;
+  }
+  .categories.active ul li {
+    margin-top: 0.5rem;
+  }
+}
