@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux"; // Hooks de Redux para d
 import { getProducts, getCategories } from "../../redux/actions"; // Acciones de Redux
 import "./Home.css";
 import Carousel from "../../components/Carousel/Carousel";
+import CardProduct from "../../components/CardProduct/CardProduct";
 
 const Home = () => {
   // useDispatch se utiliza para obtener la función dispatch de Redux
@@ -21,6 +22,7 @@ const Home = () => {
     <div className="home">
       <Carousel />
       <h1>Home</h1>
+      <CardProduct />
     </div>
   );
 };
