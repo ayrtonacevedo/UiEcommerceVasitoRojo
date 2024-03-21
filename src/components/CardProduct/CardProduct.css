@@ -1,0 +1,46 @@
+.cardProductContainer {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  height: 300px;
+  margin-left: 50px;
+  cursor: pointer;
+}
+.cardProductContainer:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.692); /* Añade una sombra más grande */
+}
+
+.cardImg {
+  width: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 0 auto 12px auto;
+  height: 200px;
+}
+.cardImg:hover {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño de la imagen */
+  transition: transform 0.3s ease-in-out; /* Suaviza el efecto de transformación */
+}
+
+.cardDetail {
+  display: block;
+  justify-content: space-between;
+  align-items: start;
+  width: 100%;
+  border-top: 2px solid #ffd700;
+  padding-top: 0.5rem;
+}
+.cardPrice {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.cardModel {
+  font-size: 1rem;
+  color: black;
+  margin-top: 0;
+}
