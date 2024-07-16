@@ -1,0 +1,72 @@
+@import "../../CSS-GlobalVariables/globalStyle.css";
+.buyButton {
+  /* background-color: #ebebeb; */
+  /* height: 100%;
+  width: 100%; */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+a {
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  color: inherit; /* Hereda el color del texto del botón */
+}
+.btnCarrito {
+  background-color: white;
+  border: 2px solid red;
+  color: black;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  /* margin: 4px 2px; */
+  cursor: pointer;
+  border-radius: 7px;
+  transition: background-color 0.3s ease;
+}
+
+.btnCarrito:hover {
+  transform: scale(
+    1.1
+  ); /* Aumenta el tamaño del botón en un 10% al pasar el cursor */
+}
+.btnNow {
+  background-color: var(--first-color);
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  /* font-weight: 550; */
+  /* margin: 4px 2px; */
+  cursor: pointer;
+  border-radius: 7px;
+  transition: background-color 0.3s ease;
+}
+.btnNow:hover {
+  transform: scale(
+    1.1
+  ); /* Aumenta el tamaño del botón en un 10% al pasar el cursor */
+}
+@media screen and (max-width: 590px) {
+  .buyButton {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  /* .btnCarrito,
+  .btnNow {
+    padding: 3px;
+  } */
+
+  .btnNow:hover {
+    transform: none;
+  }
+  .btnCarrito:hover {
+    transform: none;
+  }
+}

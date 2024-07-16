@@ -1,0 +1,38 @@
+.CardEmptyCart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid grey;
+  border-radius: 3px;
+  gap: 5px;
+  padding: 20px;
+}
+.btnContinueShopping {
+  background-color: var(--first-color);
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  /* font-weight: 550; */
+  /* margin: 4px 2px; */
+  cursor: pointer;
+  border-radius: 7px;
+  transition: background-color 0.3s ease;
+}
+.btnContinueShopping:hover {
+  transform: scale(
+    1.1
+  ); /* Aumenta el tamaño del botón en un 10% al pasar el cursor */
+}
+.CardEmptyCart p {
+  font-size: 18px; /* Tamaño de fuente */
+  color: #333; /* Color de texto */
+  margin: 10px 0; /* Margen superior e inferior */
+  text-align: center; /* Alineación del texto al centro */
+}

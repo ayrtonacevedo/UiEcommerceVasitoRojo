@@ -1,0 +1,16 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.detailProduct {
+  position: relative;
+  /* padding-top: 9.5rem;
+  margin-bottom: 7rem; */
+  /* height: 100vh; */
+}
+@media screen and (max-width: 1040px) {
+  /* .detailProduct {
+    padding-top: 8.2rem;
+  } */
+}

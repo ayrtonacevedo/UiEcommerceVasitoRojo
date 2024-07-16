@@ -1,0 +1,16 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.content {
+  position: relative;
+  margin-top: 9.6rem;
+  min-height: 70vh;
+  /* border: 1px solid black; */
+}
+@media screen and (max-width: 1040px) {
+  .content {
+    margin-top: 8.5rem;
+  }
+}

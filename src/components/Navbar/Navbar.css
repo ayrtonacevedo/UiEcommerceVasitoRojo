@@ -1,82 +1,186 @@
-/* * {
+@import "../../CSS-GlobalVariables/globalStyle.css";
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Josefin Sans", sans-serif;
 }
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem;
+.navbar1 {
+  display: block;
+  padding: 1rem 5vw;
   position: fixed;
   width: 100%;
-  height: 100px;
+  height: auto;
   background: linear-gradient(
     to bottom,
-    rgb(160, 0, 0),
-    rgba(255, 0, 0, 0.356)
+    var(--first-color),
+    var(--second-color)
   );
-  z-index: 10;
+  z-index: 999;
 }
-.navbar img {
-  max-width: 100%;
-  max-height: 100%;
+.firstLine {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.firstLine img {
+  height: 100px;
+  width: 100px;
   object-fit: contain;
 }
 
-.nav-menu {
+.searchBar {
   display: flex;
+  flex: 1;
 }
-.nav-menu li {
-  list-style-type: none;
-  display: inline-block;
-  padding: 0.5rem;
+.searchBar input {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
 }
-.nav-menu li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: large;
+.searchBar input::placeholder {
+  font-size: 16px;
 }
-.nav-menu li a:hover {
-  color: black;
-  transition: 0.5s;
-}
-
-.hamgurger {
-  display: none;
+.searchBar button {
+  height: 50px;
+  width: 30px;
+  border: none;
+  border-radius: 5px;
 }
 .icons {
   display: flex;
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
 }
-.icons a {
-  margin-right: 10px;
+
+.icons > * {
+  margin-right: 10px; /* Espacio entre los elementos */
+}
+
+.icons > :last-child {
+  margin-right: 0; /* Elimina el margen derecho del último elemento */
+}
+.cartQuantity {
+  background-color: brown;
+  color: white;
+  border-radius: 50%;
+  font-size: 18px;
+  padding: 4px;
+  top: 37px;
+  /* right: 14px; */
+  position: absolute;
+  /* display: none; */
+}
+
+.categories {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  color: white;
+  gap: 1rem;
+  font-style: var(--first-font);
+}
+
+.categories.active {
+  display: flex;
+}
+.select {
+  position: relative;
+  cursor: pointer;
+}
+.select:hover .brands li {
+  display: block;
+}
+
+.brands {
+  list-style-type: none; /* Elimina los marcadores de lista */
+  padding-left: 0; /* Elimina el padding izquierdo */
+  display: initial;
+  position: absolute;
+  background: linear-gradient(
+    to bottom,
+    var(--first-color),
+    var(--second-color)
+  );
+}
+.brands :hover {
+  color: black;
+  background-color: white;
+}
+
+.brands li {
+  font-size: 0.8rem;
+  padding: 10px;
+  cursor: pointer;
+  display: none;
+  justify-content: center;
+  font-style: var(--second-font);
+}
+
+.category-button {
+  display: none;
+}
+.categoryBybutton {
+  display: flex;
+}
+
+.hamburgerMenu {
+  display: none;
 }
 @media screen and (max-width: 1040px) {
-  .hamgurger {
+  .hamburgerMenu {
     display: initial;
   }
-  .nav-menu {
+  .categories {
+    display: none;
+  }
+  .categories.active {
+    position: fixed; /* Fijo para que aparezca por encima de otros elementos */
+    top: 100px; /* Ajusta según sea necesario */
+    right: 0; /* Aparece del lado derecho */
+    width: 80%; /* Ajusta el ancho según sea necesario */
+    /* height: 100vh;  */
+    background: linear-gradient(
+      to bottom,
+      var(--first-color),
+      var(--second-color)
+    );
+    color: white;
+    display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: self-start;
+    border-radius: 5px;
+    padding: 1rem;
+    z-index: 1000; /* Asegura que aparezca por encima del navbar */
+  }
+  .category-button {
+    display: initial;
+    border: none;
+    background: none;
+    color: white;
+  }
+  .categoryBybutton {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.9);
-    position: absolute;
-    top: 0;
-    left: -100%;
-    z-index: -3;
-    transition: 0.5s;
+    border-bottom: 2px solid var(--third-color); /* Añade una línea en el borde inferior */
   }
-  .nav-menu.active {
-    left: 0;
+
+  .brands {
+    position: relative;
   }
-  .nav-menu li {
-    padding: 1rem 0;
+  .select {
+    width: 100%;
   }
-  .nav-menu li a {
-    font-size: 2rem;
+  .select:hover .brands li {
+    display: none;
   }
-} */
+  .cartQuantity {
+    font-size: 14px;
+  }
+}

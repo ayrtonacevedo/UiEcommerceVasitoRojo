@@ -1,0 +1,143 @@
+.container {
+  /* height: 100hv; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  border: solid 2px green;
+  position: relative;
+}
+.containerCardDetailProduct {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+  /* gap: 1rem; */
+  /* border: solid 1px grey; */
+  border-radius: 5px;
+  background-color: white;
+  max-width: 1000px;
+}
+.imgProduct {
+  display: flex;
+  /* border: solid 1px; */
+  padding: 0.5rem;
+}
+.imgs img {
+  object-fit: cover;
+  border-radius: 8px;
+  height: 50px;
+  width: 50px;
+  border: solid 0.1px grey;
+  cursor: pointer;
+}
+
+.imgProductGrand img {
+  /* border: solid 1px gray; */
+  object-fit: cover;
+  max-width: 400px;
+  max-height: 500px;
+}
+.infoProduct {
+  /* border: solid 1px; */
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: flex-start;
+  gap: 0.5rem;
+  padding-top: 1rem;
+}
+.model {
+  font-size: 25px;
+}
+.price {
+  font-size: 40px;
+  font-weight: normal;
+  font-stretch: condensed;
+}
+
+.shop {
+  border: solid 1px rgba(128, 128, 128, 0.632);
+  border-radius: 4px;
+  background-color: #ebebeb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+}
+.caracteristicasProduct {
+  /* border: solid 1px; */
+  grid-column: 1 / -1;
+  padding: 1rem;
+  height: auto;
+  gap: 0.5rem;
+}
+/* Producto.css */
+.tableCategory {
+  width: 100%; /* Ajusta el ancho de la tabla */
+  margin-bottom: 10px;
+  border-collapse: collapse; /* Asegura que los bordes de las celdas se colapsen en un solo borde */
+  /* Aplica un borde a la tabla completa */
+}
+
+.tableCategory td,
+.tableCategory th {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.tableCategory strong {
+  font-size: 16px;
+  color: black;
+}
+.tableCategory tr td:nth-child(1) {
+  background-color: #ebebeb; /* Cambia este valor al color de fondo deseado */
+}
+
+@media screen and (max-width: 1040px) {
+  .containerCardDetailProduct {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "img info"
+      "img shop"
+      "cate cate";
+  }
+  .imgProductGrand {
+    grid-area: img;
+  }
+  .infoProduct {
+    grid-area: info;
+  }
+  .shop {
+    grid-area: shop;
+    /* margin: 0; */
+  }
+  .caracteristicasProduct {
+    grid-area: cate;
+  }
+}
+@media screen and (max-width: 590px) {
+  .container {
+    padding: 0;
+  }
+  .containerCardDetailProduct {
+    grid-template-areas:
+      "img info"
+      "img info"
+      "shop shop"
+      "cate cate";
+  }
+  .imgs {
+    display: none;
+  }
+  .imgProductGrand img {
+    /* border: solid 1px gray; */
+    object-fit: cover;
+    max-width: 200px;
+    height: auto;
+  }
+  .shop {
+    margin-right: 0rem;
+  }
+}

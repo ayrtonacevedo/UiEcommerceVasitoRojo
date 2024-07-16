@@ -1,9 +1,16 @@
-import { GET_PRODUCTS, GET_CATEGORIES } from "./actions";
+import {
+  GET_PRODUCTS,
+  GET_CATEGORIES,
+  GET_BRANDSBYCATEGORIES,
+  PRODUCT_DETAIL,
+} from "./actions";
 
 //INITIAL STATE
 const initialState = {
   allProducts: [],
   allCategories: [],
+  allBrandsByCategories: [],
+  productDetailId: [],
 };
 
 export default function rootReducer(state = initialState, action) {
@@ -17,6 +24,16 @@ export default function rootReducer(state = initialState, action) {
       return {
         ...state,
         allCategories: action.payload,
+      };
+    case GET_BRANDSBYCATEGORIES:
+      return {
+        ...state,
+        allBrandsByCategories: action.payload,
+      };
+    case PRODUCT_DETAIL:
+      return {
+        ...state,
+        productDetailId: action.payload,
       };
 
     default:

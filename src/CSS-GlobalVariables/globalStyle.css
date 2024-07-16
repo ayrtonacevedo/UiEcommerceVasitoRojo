@@ -1,0 +1,8 @@
+/* variables.css */
+:root {
+  --first-color: rgb(160, 0, 0);
+  --second-color: rgba(255, 0, 0, 0.356);
+  --third-color: #ffd700;
+  --first-font: "Roboto", sans-serif;
+  --second-font: "Open Sans", sans-serif;
+}

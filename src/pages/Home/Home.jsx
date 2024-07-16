@@ -1,28 +1,40 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux"; // Hooks de Redux para despachar acciones y seleccionar el estado
-import { getProducts, getCategories } from "../../redux/actions"; // Acciones de Redux
+import { getProducts } from "../../redux/actions"; // Acciones de Redux
 import "./Home.css";
 import Carousel from "../../components/Carousel/Carousel";
 import CardProduct from "../../components/CardProduct/CardProduct";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   // useDispatch se utiliza para obtener la función dispatch de Redux
   const dispatch = useDispatch();
   // estados de redux
   const allProducts = useSelector((state) => state.allProducts);
-  const allCategories = useSelector((state) => state.allCategories);
 
-  // despacha las acciones cuando el componente se monta
-  // useEffect(() => {
-  //   dispatch(getProducts());
-  //   dispatch(getCategories());
-  // }, [dispatch]);
+  useEffect(() => {
+    dispatch(getProducts());
+    // dispatch(getCategories());
+  }, [dispatch]);
 
   return (
     <div className="home">
       <Carousel />
       <h1>Home</h1>
-      <CardProduct />
+      <div className="cartas-container">
+        {allProducts?.map((p) => (
+          <div className="carta" key={p.id}>
+            <Link to={"/product/" + p.id}>
+              <CardProduct
+                img={p.images[0]}
+                price={p.price}
+                model={p.model}
+                volume={p.volume}
+              />
+            </Link>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
